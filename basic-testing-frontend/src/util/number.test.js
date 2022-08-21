@@ -22,10 +22,13 @@ it('should transform a string number to a number value', () => {
 it('should yield NaN for non-transformable values', () => {
   // Arrange
   const number = 'one';
+  const number2 = 'two';
   // Act
   const result = transformToNumber(number);
+  const result2 = transformToNumber(number2);
   // Assert
   expect(result).toBeNaN();
+  expect(result2).toBeNaN();
 });
 
 it('should yield NaN when not providing a number', () => {
