@@ -10,6 +10,15 @@ it('should transform a string number to a number type', () => {
   expect(result).toBeTypeOf('number');
 });
 
+it('should transform a string number to a number value', () => {
+  // Arrange
+  const number = '1';
+  // Act
+  const result = transformToNumber(number);
+  // Assert
+  expect(result).toBe(+number);
+});
+
 it('should yield NaN for non-transformable values', () => {
   // Arrange
   const number = 'one';
